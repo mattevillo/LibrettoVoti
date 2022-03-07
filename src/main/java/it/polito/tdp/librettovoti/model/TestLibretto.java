@@ -19,7 +19,9 @@ public class TestLibretto {
 		
 		Libretto libretto25 = libretto.votiUguali(25);
 		System.out.println(libretto25);
-
+		
+		Voto ricerca = libretto.ricercaCorso("Informatica");
+		System.out.println(ricerca);
 	}
 
 }
