@@ -11,8 +11,7 @@ public class Libretto {
 	
 
 	public void add(Voto voto1) {
-		voti.add(voto1);
-		
+		voti.add(voto1);		
 	}
 
 
@@ -23,6 +22,17 @@ public class Libretto {
 		}
 		return s;
 	}
+		
+	
+	public Libretto votiUguali(int punteggio){
+		Libretto risultato = new Libretto();
+		for (Voto v: this.voti) {
+			if (v.getVoto()==punteggio)
+				risultato.add(v);
+		}
+		return risultato;
+	}
+	
 	
 	
 
