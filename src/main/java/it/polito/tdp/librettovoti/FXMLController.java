@@ -2,6 +2,7 @@ package it.polito.tdp.librettovoti;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import it.polito.tdp.librettovoti.model.Libretto;
@@ -50,7 +51,7 @@ public class FXMLController {
     		
     		
     	
-    	model.add(new Voto(nome, punti, LocalDate.now()));
+    	model.add(new Voto(nome, punti));
     	
     	String contenutoLibretto = model.toString();
     	txtVoti.setText(contenutoLibretto);
@@ -62,6 +63,9 @@ public class FXMLController {
     
     public void setModel(Libretto model) {
     	this.model=model;
+    	
+    	List<Voto> voti = model.getVoti();
+    	txtVoti.clear();
     }
 
     @FXML
@@ -74,5 +78,7 @@ public class FXMLController {
         for (int p=18; p<=30; p++)
         	cmbPunti.getItems().add(p);     
     }
+
+    
 
 }

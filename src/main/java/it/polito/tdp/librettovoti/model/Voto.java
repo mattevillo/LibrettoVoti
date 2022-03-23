@@ -1,12 +1,10 @@
 package it.polito.tdp.librettovoti.model;
 
-import java.time.LocalDate;
 
 public class Voto {
 	
 	private String nome;
 	private int voto;
-	private LocalDate data;
 	
 	/**
 	 * Costruttore della classe voto
@@ -14,11 +12,10 @@ public class Voto {
 	 * @param voto
 	 * @param data
 	 */
-	public Voto(String nome, int voto, LocalDate data) {
+	public Voto(String nome, int voto) {
 		super();
 		this.nome = nome;
 		this.voto = voto;
-		this.data = data;
 	}
 
 	public String getNome() {
@@ -37,17 +34,10 @@ public class Voto {
 		this.voto = voto;
 	}
 
-	public LocalDate getData() {
-		return data;
-	}
-
-	public void setData(LocalDate data) {
-		this.data = data;
-	}
 
 	@Override
 	public String toString() {
-		return "Esame "+nome+" superato con "+voto+" il "+data;
+		return "Esame "+nome+" superato con "+voto;
 	}
 
 
